@@ -122,24 +122,6 @@
 		<!-- scripts -->
 		<script>
 			window.conversation_id = "{{ chat_id }}";
-
-
-
-
-//减少滥用，过滤部分纯粹白嫖用户
-if (localStorage.getItem('isVerified')) {
-} else {
-  var password = prompt('请输入访问码（私信小基获取访问码）：');
-  if (password === 'xiaoji') {
-    localStorage.setItem('isVerified', true);
-    alert('欢迎使用，此项目免费使用，请勿滥用！');
-  } else {
-    alert('密码错误，请重试！');
-location.reload()
-  }
-}
-
-			
 		</script>
 		<script src="{{ url_for('bp.static', filename='js/icons.js') }}"></script>
 		<script src="{{ url_for('bp.static', filename='js/chat.js') }}" defer></script>
